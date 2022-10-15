@@ -13,7 +13,15 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        // ownerから始まるURL
+        if (request()->is('owner*')) {
+        config(['session.cookie' => config('session.cookie_owner')]);
+        }
+        
+        // adminから始まるURL
+        if (request()->is('admin*')) {
+        config(['session.cookie' => config('session.cookie_admin')]);
+        }
     }
 
     /**
