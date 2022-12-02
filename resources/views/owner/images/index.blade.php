@@ -19,7 +19,8 @@
                     <a href="{{ route('owner.images.edit', ['image' => $image->id])}}">
                       <div class="border rounded-md p-2 md:p-4">
                         <x-thumnail :filename="$image->filename" type="products" />
-                        <div class="text-gray-300">{{ $image->title }}</div>                      </div>
+                        <div class="text-gray-300">{{ $image->title }}</div>  
+                      </div>
                     </a>
                   </div>
                   @endforeach
