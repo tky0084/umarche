@@ -23,7 +23,7 @@
                             <div class="p-2 w-1/2 mx-auto">
                             <div class="relative">                   
                             <div class="w-32">
-                                <x-thumnail :filename="$image->filename" type="products" />
+                                <x-thumbnail :filename="$image->filename" type="products" />
                              </div>                          
                                  <div class="p-2 w-full flex justify-around mt-4">
                                  <button type="submit" class=" text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">更新する</button>

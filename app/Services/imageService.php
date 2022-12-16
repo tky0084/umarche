@@ -12,13 +12,12 @@ class ImageService
     {
       $file = $imageFile['image'];
     } else {
-      $file = $imagefile;
+      $file = $imageFile;
     }
-    $resizedImage = InterventionImage::make($file)->resize(1920, 1080)->encode(); 
     $fileName = uniqid(rand().'_');
     $extension = $file->extension();
     $fileNameToStore = $fileName. '.' . $extension; 
-
+    $resizedImage = InterventionImage::make($file)->resize(1920, 1080)->encode(); 
     Storage::put('public/' . $folderName . '/' . $fileNameToStore, $resizedImage );
 
     return $fileNameToStore;
