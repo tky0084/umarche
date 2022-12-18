@@ -999,11 +999,11 @@ select{
 .w-full{
   width: 100%;
 }
-.w-32{
-  width: 8rem;
-}
 .w-1\/4{
   width: 25%;
+}
+.w-32{
+  width: 8rem;
 }
 .w-48{
   width: 12rem;
@@ -1244,10 +1244,6 @@ select{
 .bg-indigo-400{
   --tw-bg-opacity: 1;
   background-color: rgb(129 140 248 / var(--tw-bg-opacity));
-}
-.bg-indigo-600{
-  --tw-bg-opacity: 1;
-  background-color: rgb(79 70 229 / var(--tw-bg-opacity));
 }
 .bg-opacity-50{
   --tw-bg-opacity: 0.5;

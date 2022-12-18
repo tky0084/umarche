@@ -20,7 +20,7 @@ class ProductController extends Controller
         $this->middleware(function($request, $next){ 
                 $id = $request->route()->parameter('product'); 
                 if(!is_null($id)){ 
-                    $imagesOwnerId = Product::findOrFail($id)->shop->owner->id; 
+                    $productsOwnerId = Product::findOrFail($id)->shop->owner->id; 
                     $productId = (int)$productsOwnerId; // キャスト 文字列→数値に型変換 
                     if($productId !== Auth::id()){ 
                         abort(404); 
