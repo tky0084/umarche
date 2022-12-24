@@ -79,11 +79,10 @@
                         <div class="flex items-center">
                           <span class="mr-3">数量</span>
                           <div class="relative">
-                            <select class="rounded border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:border-indigo-500 text-base pl-3 pr-10">
-                              <option>SM</option>
-                              <option>M</option>
-                              <option>L</option>
-                              <option>XL</option>
+                            <select name="quantity" class="rounded border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:border-indigo-500 text-base pl-3 pr-10">
+                              @for ($i = 1; $i <= $quantity; $i++)
+                              <option value="{{$i}}">{{$i}}</option>
+                              @endfor
                             </select>
                           </div>
                         </div>
@@ -113,7 +112,7 @@
         <div class="modal__overlay" tabindex="-1" data-micromodal-close>
           <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
             <header class="modal__header">
-              <h2 class="text-xl text-gray-700 modal__title" id="modal-1-title">
+              <h2 class=""text-xl text-gray-700 modal__title" id="modal-1-title">
                 {{ $product->shop->name }}
               </h2>
               <button type="button" class="modal__close" aria-label="Close modal" data-micromodal-close></button>
