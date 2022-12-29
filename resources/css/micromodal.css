@@ -171,4 +171,5 @@
 .micromodal-slide .modal__container,
 .micromodal-slide .modal__overlay {
   will-change: transform;
+  
 }
