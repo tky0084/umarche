@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers\Owner;
 
-Use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ProductRequest;
 use App\Models\Image;
@@ -12,6 +11,7 @@ use App\Models\Product;
 use App\Models\Shop;
 use App\Models\Stock;
 use Illuminate\Http\Request;
+Use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB; //QueryBuilder
 
 class ProductController extends Controller
