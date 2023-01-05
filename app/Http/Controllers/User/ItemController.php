@@ -30,7 +30,7 @@ class ItemController extends Controller
     {
         $products = Product::availableItems()
         ->sortOrder($request->sort)
-        ->paginate($request->pagination);
+        ->paginate($request->pagination ?? '20');
         
         //dd($stocks, $products);
         //$products = Product::all();
