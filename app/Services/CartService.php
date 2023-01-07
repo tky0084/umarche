@@ -26,8 +26,6 @@ class CartService
       array_push($products, $result); //配列に追加
     }
 
-    dd($products);
-
     return $products; // 新しい配列を返す
   }
 }
