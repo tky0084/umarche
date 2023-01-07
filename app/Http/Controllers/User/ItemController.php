@@ -3,11 +3,13 @@
 namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
+use App\Models\PrimaryCategory;
 use App\Models\Product;
 use App\Models\Stock;
 use Illuminate\Http\Request;
-use App\Models\PrimaryCategory;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\Testmail;
 
 class ItemController extends Controller
 {
@@ -30,6 +32,9 @@ class ItemController extends Controller
     public function index(Request $request)
     {
         //dd($request);
+        Mail::to('test@example.com')
+        ->send(new TestMail());
+
         $categories = PrimaryCategory::with('secondary')->get();
         
         $products = Product::availableItems()
