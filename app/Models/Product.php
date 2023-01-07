@@ -99,7 +99,7 @@ class Product extends Model
         if($sortOrder === null || $sortOrder === \Constant::SORT_ORDER['recommend']){
             return $query->orderBy('sort_order', 'asc') ;
         }
-        
+
         if($sortOrder === \Constant::SORT_ORDER['higherPrice']){
             return $query->orderBy('price', 'desc') ;
         }
@@ -114,6 +114,16 @@ class Product extends Model
 
         if($sortOrder === \Constant::SORT_ORDER['older']){
             return $query->orderBy('products.created_at', 'asc') ;
+        }
+    }
+
+    public function scopeSelectCategory($query, $categoryId)
+    {
+        if($categoryId !== '0')
+        {
+            return $query->where('secondary_category_id', $categoryId);
+        } else {
+            return;
         }
     }
 }
